@@ -634,4 +634,95 @@ html {
    background: linear-gradient(10deg, #96701d 10%, #F7BF45 100%);
 }
 
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+    padding: 0 8px;
+  }
+
+  .intro {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+    margin: 2rem 0;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro h2 {
+    font-size: 1rem;
+    white-space: normal;
+  }
+
+  .intro-photo img {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+  }
+
+  .header-container,
+  .footer-container {
+    padding: 0 16px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-nav,
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .header-social,
+  .footer-social {
+    justify-content: center;
+  }
+
+  .servicos-cards {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 16px;
+  }
+
+  .servico-card {
+    width: 90%;
+  }
+
+  .swiper-slide {
+    width: 140px;
+    height: 140px;
+  }
+
+  .swiper-slide img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .habilidades h1,
+  .projetos h1,
+  .swiper-servicos h1 {
+    font-size: 2rem;
+  }
+
+  .contato-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .contato-form {
+    padding: 0 16px;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .veja-mais {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
 
