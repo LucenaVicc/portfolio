@@ -3,7 +3,8 @@ body {
   font-family: 'Montserrat', Arial, sans-serif;
   color: #fff;
   background: radial-gradient(circle at bottom, #1E1E2F 20%, #000000 100%);
-
+    overflow-x: flex;
+  overflow-y: flex;
 }
 body::before {
   content: "";
@@ -20,6 +21,7 @@ body::before {
   animation: halftoneMove 2s linear infinite;
   pointer-events: 100%;
   z-index: -5;
+  
 }
 
 @keyframes halftoneMove {
@@ -78,7 +80,7 @@ body::before {
   font-weight: 500;
   transition: color 0.2s;
   position: relative;
-
+  
 }
 
 .header-nav a::after {
@@ -233,7 +235,7 @@ strong {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
-
+  
 }
 
 .intro-photo {
@@ -248,16 +250,16 @@ strong {
   border-radius: 50%;
   border: 4px solid #F7BF45;
   box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-
+  
 }
 /* Habilidades Swiper */
 .habilidades-swiper {
-  height: 10vw;
+  height: 20vw;
   width: 100vw;
   margin: 0;
   max-width: none;
-  border-radius: 0;
-  padding: 0;
+  border-radius: 100;
+  padding: 10;
 }
 
 @media (max-width: 900px) {
@@ -317,6 +319,8 @@ strong {
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
+
+
 
 /* Cards de serviços */
 .servicos-cards {
@@ -405,7 +409,7 @@ strong {
   text-align: center;
   transform: scale(0.8) rotateY(30deg);
   opacity: 0;
-  transition:
+  transition: 
     transform 0.5s cubic-bezier(.25,.8,.25,1),
     opacity 0.5s cubic-bezier(.25,.8,.25,1);
 }
@@ -413,7 +417,7 @@ strong {
 .modal.show .modal-content {
   transform: scale(1) rotateY(0deg);
   opacity: 1;
-
+  
 }
 
 .close {
@@ -432,7 +436,7 @@ strong {
 
 .servico-card {
   color: #fff;
-
+  
 }
 
 /* Área de Contato */
@@ -642,95 +646,4 @@ html {
    background: linear-gradient(10deg, #96701d 10%, #F7BF45 100%);
 }
 
-@media (max-width: 480px) {
-  body {
-    font-size: 15px;
-    padding: 0 8px;
-  }
-
-  .intro {
-    flex-direction: column;
-    gap: 24px;
-    padding: 0;
-    margin: 2rem 0;
-  }
-
-  .intro h1 {
-    font-size: 2rem;
-  }
-
-  .intro h2 {
-    font-size: 1rem;
-    white-space: normal;
-  }
-
-  .intro-photo img {
-    width: 160px;
-    height: 160px;
-    margin: 0 auto;
-  }
-
-  .header-container,
-  .footer-container {
-    padding: 0 16px;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .header-nav,
-  .footer-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .header-social,
-  .footer-social {
-    justify-content: center;
-  }
-
-  .servicos-cards {
-    flex-direction: column;
-    gap: 24px;
-    padding: 0 16px;
-  }
-
-  .servico-card {
-    width: 90%;
-  }
-
-  .swiper-slide {
-    width: 140px;
-    height: 140px;
-  }
-
-  .swiper-slide img {
-    max-width: 80px;
-    max-height: 80px;
-  }
-
-  .habilidades h1,
-  .projetos h1,
-  .swiper-servicos h1 {
-    font-size: 2rem;
-  }
-
-  .contato-section h1 {
-    font-size: 2.2rem;
-  }
-
-  .contato-form {
-    padding: 0 16px;
-  }
-
-  .modal-content {
-    width: 95%;
-    padding: 16px;
-  }
-
-  .veja-mais {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-}
 

@@ -40,26 +40,37 @@ document.addEventListener('DOMContentLoaded', function () {
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
-      reverseDirection: true // desliza da esquerda para a direita
+      reverseDirection: true
     },
     speed: 3000,
-    allowTouchMove: false,
-    grabCursor: false,
+    grabCursor: true,
+
+    // Permitir touch apenas em telas menores
     breakpoints: {
-      900: { slidesPerView: 3 },
-      600: { slidesPerView: 2 },
-      0:   { slidesPerView: 1 }
+      900: {
+        slidesPerView: 3,
+        allowTouchMove: true
+      },
+      600: {
+        slidesPerView: 2,
+        allowTouchMove: true
+      },
+      0: {
+        slidesPerView: 1.3,
+        allowTouchMove: true
+      }
     }
   });
 });
+
 
 function abrirModal(titulo, img, descricao) {
   document.getElementById('modalTitulo').innerText = titulo;
   document.getElementById('modalImg').src = img;
   document.getElementById('modalImg').alt = titulo;
   document.getElementById('modalDescricao').innerText = descricao;
-
-
+  
+  
   const modal = document.getElementById('modalProjeto');
   modal.style.display = 'flex'; // ✅ Corrigido para centralizar com flex
   setTimeout(() => modal.classList.add('show'), 10); // ativa o efeito 3D
@@ -79,3 +90,22 @@ window.onclick = function(event) {
   }
 };
 
+const swiper = new Swiper('.habilidades-swiper', {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  loop: true,
+  breakpoints: {
+    1024: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1.3, // permite scroll lateral suave
+    }
+  }
+});
