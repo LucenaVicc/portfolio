@@ -1,7 +1,10 @@
 const textos = [
-  "Desenvolvedor Front-End com foco em interfaces modernas e criativas.",
   "Designer gráfico com foco em identidade visual forte e comunicação criativa.",
-  "Designer UI/UX com foco em experiências digitais intuitivas e atraentes."
+  "Designer UI/UX com foco em experiências digitais intuitivas e atraentes.",
+  "Desenvolvedor FullStack com expertise em front-end, back-end e aplicações móveis.",
+  "Entusiasta de IA, explorando aplicações criativas e inovadoras em design e desenvolvimento.",
+  "Modelador 3D, trazendo conceitos à vida com detalhes realistas e visuais impressionantes.",
+  "Editor de vídeo, transformando ideias em narrativas visuais dinâmicas e impactantes."  
 ];
 
 let textoIndex = 0;
@@ -39,25 +42,25 @@ document.addEventListener('DOMContentLoaded', function () {
     loop: true,
     autoplay: {
       delay: 0,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
       reverseDirection: true
     },
     speed: 3000,
-    grabCursor: true,
+    grabCursor: false,
 
-    // Permitir touch apenas em telas menores
+    // Desabilitar interação com touch
     breakpoints: {
       900: {
         slidesPerView: 3,
-        allowTouchMove: true
+        allowTouchMove: false
       },
       600: {
         slidesPerView: 2,
-        allowTouchMove: true
+        allowTouchMove: false
       },
       0: {
         slidesPerView: 1.3,
-        allowTouchMove: true
+        allowTouchMove: false
       }
     }
   });
@@ -94,6 +97,8 @@ const swiper = new Swiper('.habilidades-swiper', {
   slidesPerView: 4,
   spaceBetween: 20,
   loop: true,
+  grabCursor: false,
+  allowTouchMove: false,
   breakpoints: {
     1024: {
       slidesPerView: 4,
